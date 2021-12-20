@@ -1,4 +1,3 @@
-from pathlib import Path
 from tkinter import *
 from treatment import broad_words, broad_most_freq_word, search_word, broad_sequences,broad_seq_in_prot
 
@@ -11,12 +10,12 @@ y = list(h.keys())[0]+" repeated "+str(list(h.values())[0])+" times!"
 window = Tk()
 window.title("Fasta Project")
 window.geometry("800x600")
-window.configure(bg = "#F3BA9A")
+window.configure(bg = "#E7C980")
 
 
 canvas = Canvas(
     window,
-    bg = "#F3BA9A",
+    bg = "#E7C980",
     height = 600,
     width = 800,
     bd = 0,
@@ -91,11 +90,11 @@ def opengui1():
     newwindow.geometry("800x600")
     vbar = Scrollbar(newwindow, orient=VERTICAL)
     vbar.grid(row=0, column=1, sticky=NW + SE)
-    newwindow.configure(bg="#F3BA9A")
+    newwindow.configure(bg="#E7C980")
 
     canvas = Canvas(
         newwindow,
-        bg="#F3BA9A",
+        bg="#E7C980",
         height=600,
         width=800,
         bd=0,
@@ -150,22 +149,17 @@ def opengui2():
 
     x = broad_seq_in_prot()
 
-    OUTPUT_PATH = Path(__file__).parent
-    ASSETS_PATH = OUTPUT_PATH / Path("./assets")
-
-    def relative_to_assets(path: str) -> Path:
-        return ASSETS_PATH / Path(path)
 
     newwindow.rowconfigure(0, weight=1)
     newwindow.columnconfigure(0, weight=1)
     newwindow.geometry("800x600")
     vbar = Scrollbar(newwindow, orient=VERTICAL)
     vbar.grid(row=0, column=1, sticky=NW + SE)
-    newwindow.configure(bg="#F3BA9A")
+    newwindow.configure(bg="#E7C980")
 
     canvas = Canvas(
         newwindow,
-        bg="#F3BA9A",
+        bg="#E7C980",
         height=600,
         width=800,
         bd=0,
